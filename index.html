@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="歐格數位科技 – Meta廣告投放、廣告帳號租用、軟體工程外包服務。讓您的品牌在數位世界發光。">
+<title>歐格數位科技 | Meta廣告投放・軟體工程外包</title>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2136946307171684');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2136946307171684&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Serif+TC:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0B1829;
+    --navy-mid: #152540;
+    --navy-light: #1E3A5F;
+    --orange: #F5640A;
+    --orange-light: #FF8340;
+    --orange-pale: #FFF0E8;
+    --cream: #FAFAF8;
+    --gray-100: #F4F3F0;
+    --gray-200: #E8E6E1;
+    --gray-400: #A8A49C;
+    --gray-600: #6B6760;
+    --gray-800: #2E2C28;
+    --white: #FFFFFF;
+    --font-sans: 'Plus Jakarta Sans', sans-serif;
+    --font-serif: 'Noto Serif TC', serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--cream);
+    color: var(--navy);
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(11,24,41,0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding: 0 5%;
+    height: 64px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+
+  .nav-logo {
+    display: flex; align-items: center; gap: 10px;
+    text-decoration: none; color: white;
+  }
+  .nav-logo-mark {
+    width: 36px; height: 36px; background: var(--orange);
+    border-radius: 8px; display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 18px; color: white; letter-spacing: -1px;
+  }
+  .nav-logo-text { font-size: 15px; font-weight: 700; letter-spacing: 0.02em; }
+  .nav-logo-sub { font-size: 10px; color: rgba(255,255,255,0.5); letter-spacing: 0.08em; text-transform: uppercase; }
+
+  .nav-links { display: flex; align-items: center; gap: 32px; }
+  .nav-links a {
+    color: rgba(255,255,255,0.75); text-decoration: none;
+    font-size: 14px; font-weight: 500; transition: color 0.2s;
+  }
+  .nav-links a:hover { color: white; }
+  .nav-cta {
+    background: var(--orange); color: white !important;
+    padding: 8px 20px; border-radius: 6px;
+    font-size: 14px !important; font-weight: 600 !important;
+    transition: background 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--orange-light) !important; }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: var(--navy);
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 120px 5% 80px;
+    position: relative; overflow: hidden;
+  }
+
+  .hero-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 80px; align-items: center;
+    max-width: 1200px; margin: 0 auto; width: 100%;
+  }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(245,100,10,0.15); border: 1px solid rgba(245,100,10,0.3);
+    border-radius: 100px; padding: 6px 16px; margin-bottom: 28px;
+  }
+  .hero-badge-dot {
+    width: 6px; height: 6px; background: var(--orange);
+    border-radius: 50%; animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; } 50% { opacity: 0.4; }
+  }
+  .hero-badge span { font-size: 12px; color: var(--orange-light); font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+
+  .hero h1 {
+    font-size: clamp(36px, 5vw, 58px);
+    font-weight: 800; color: white;
+    line-height: 1.12; letter-spacing: -0.03em; margin-bottom: 24px;
+  }
+  .hero h1 em { color: var(--orange); font-style: normal; }
+
+  .hero-desc {
+    font-size: 17px; color: rgba(255,255,255,0.65);
+    line-height: 1.8; margin-bottom: 40px; max-width: 480px;
+  }
+
+  .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--orange); color: white;
+    padding: 14px 32px; border-radius: 8px;
+    font-size: 15px; font-weight: 700; text-decoration: none;
+    border: none; cursor: pointer; transition: all 0.2s;
+    letter-spacing: 0.01em;
+  }
+  .btn-primary:hover { background: var(--orange-light); transform: translateY(-1px); }
+  .btn-outline {
+    background: transparent; color: rgba(255,255,255,0.8);
+    padding: 14px 32px; border-radius: 8px;
+    font-size: 15px; font-weight: 600; text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.2); cursor: pointer; transition: all 0.2s;
+  }
+  .btn-outline:hover { border-color: rgba(255,255,255,0.5); color: white; }
+
+  .hero-visual {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .hero-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 16px; padding: 24px;
+    transition: background 0.3s;
+  }
+  .hero-card:hover { background: rgba(255,255,255,0.08); }
+  .hero-card-full { grid-column: 1 / -1; }
+  .hero-card-icon {
+    width: 44px; height: 44px; border-radius: 10px;
+    background: rgba(245,100,10,0.2);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; margin-bottom: 16px;
+  }
+  .hero-card h3 { font-size: 14px; font-weight: 700; color: white; margin-bottom: 6px; }
+  .hero-card p { font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.6; }
+  .hero-card-stat { font-size: 28px; font-weight: 800; color: var(--orange); margin-top: 8px; }
+
+  .hero-scroll {
+    position: absolute; bottom: 40px; left: 50%;
+    transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+  }
+  .hero-scroll span { font-size: 11px; color: rgba(255,255,255,0.3); letter-spacing: 0.1em; text-transform: uppercase; }
+  .scroll-arrow {
+    width: 24px; height: 24px; border-right: 2px solid rgba(255,255,255,0.2);
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+    transform: rotate(45deg);
+    animation: bounce 2s infinite;
+  }
+  @keyframes bounce {
+    0%, 100% { transform: rotate(45deg) translateY(0); }
+    50% { transform: rotate(45deg) translateY(4px); }
+  }
+
+  /* ── SECTION BASE ── */
+  section { padding: 100px 5%; }
+  .section-inner { max-width: 1200px; margin: 0 auto; }
+
+  .section-label {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 12px; font-weight: 700; letter-spacing: 0.12em;
+    text-transform: uppercase; color: var(--orange); margin-bottom: 20px;
+  }
+  .section-label::before {
+    content: ''; display: block;
+    width: 20px; height: 2px; background: var(--orange);
+  }
+
+  .section-title {
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 800; color: var(--navy);
+    line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 16px;
+  }
+  .section-desc {
+    font-size: 17px; color: var(--gray-600); line-height: 1.8;
+    max-width: 560px;
+  }
+
+  /* ── SERVICES ── */
+  #services { background: var(--white); }
+
+  .services-header {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    margin-bottom: 64px; flex-wrap: wrap; gap: 24px;
+  }
+
+  .service-block {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 48px; align-items: start;
+    padding: 56px; background: var(--cream);
+    border-radius: 24px; margin-bottom: 32px;
+    border: 1px solid var(--gray-200);
+    position: relative; overflow: hidden;
+  }
+  .service-block::before {
+    content: ''; position: absolute;
+    top: 0; left: 0; width: 4px; height: 100%;
+    background: var(--orange);
+  }
+  .service-block.alt { background: var(--navy); border-color: var(--navy-mid); }
+  .service-block.alt::before { background: var(--orange); }
+
+  .service-num {
+    font-size: 72px; font-weight: 800;
+    color: rgba(0,0,0,0.06); line-height: 1;
+    font-family: var(--font-sans);
+    position: absolute; top: 24px; right: 40px;
+    letter-spacing: -4px;
+  }
+  .service-block.alt .service-num { color: rgba(255,255,255,0.06); }
+
+  .service-icon {
+    width: 56px; height: 56px; border-radius: 14px;
+    background: var(--orange-pale); display: flex;
+    align-items: center; justify-content: center;
+    font-size: 28px; margin-bottom: 24px;
+  }
+  .service-block.alt .service-icon { background: rgba(245,100,10,0.2); }
+
+  .service-title {
+    font-size: 26px; font-weight: 800; margin-bottom: 12px;
+    color: var(--navy); letter-spacing: -0.02em;
+  }
+  .service-block.alt .service-title { color: white; }
+
+  .service-desc {
+    font-size: 15px; color: var(--gray-600); line-height: 1.8; margin-bottom: 32px;
+  }
+  .service-block.alt .service-desc { color: rgba(255,255,255,0.6); }
+
+  .service-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+  .tag {
+    font-size: 13px; font-weight: 600;
+    padding: 6px 14px; border-radius: 100px;
+    background: white; color: var(--navy);
+    border: 1px solid var(--gray-200);
+  }
+  .service-block.alt .tag {
+    background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.85);
+    border-color: rgba(255,255,255,0.15);
+  }
+  .tag.accent { background: var(--orange-pale); color: var(--orange); border-color: rgba(245,100,10,0.2); }
+
+  .service-features { list-style: none; }
+  .service-features li {
+    display: flex; align-items: flex-start; gap: 12px;
+    font-size: 15px; color: var(--gray-600); padding: 10px 0;
+    border-bottom: 1px solid var(--gray-200);
+  }
+  .service-block.alt .service-features li {
+    color: rgba(255,255,255,0.65); border-color: rgba(255,255,255,0.1);
+  }
+  .service-features li:last-child { border: none; }
+  .feature-dot {
+    width: 20px; height: 20px; border-radius: 50%;
+    background: var(--orange-pale); color: var(--orange);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 700; flex-shrink: 0; margin-top: 2px;
+  }
+  .service-block.alt .feature-dot { background: rgba(245,100,10,0.2); }
+
+  /* ── PROCESS ── */
+  #process { background: var(--cream); }
+
+  .process-steps {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 0; margin-top: 64px; position: relative;
+  }
+  .process-steps::before {
+    content: ''; position: absolute;
+    top: 36px; left: 10%; right: 10%; height: 1px;
+    background: var(--gray-200); z-index: 0;
+  }
+  .process-step { text-align: center; padding: 0 24px; position: relative; z-index: 1; }
+  .step-circle {
+    width: 72px; height: 72px; border-radius: 50%;
+    background: white; border: 1px solid var(--gray-200);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 24px; font-size: 28px;
+    position: relative;
+  }
+  .step-circle.active { background: var(--navy); border-color: var(--navy); }
+  .step-num {
+    position: absolute; top: -6px; right: -6px;
+    width: 22px; height: 22px; background: var(--orange);
+    border-radius: 50%; font-size: 11px; font-weight: 800;
+    color: white; display: flex; align-items: center; justify-content: center;
+  }
+  .step-title { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+  .step-desc { font-size: 13px; color: var(--gray-400); line-height: 1.6; }
+
+  /* ── BLOG ── */
+  #blog { background: var(--white); }
+
+  .blog-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; flex-wrap: wrap; gap: 20px; }
+
+  .blog-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 24px; }
+
+  .blog-card {
+    border-radius: 16px; overflow: hidden;
+    background: var(--cream); border: 1px solid var(--gray-200);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+  }
+  .blog-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(11,24,41,0.1); }
+
+  .blog-img {
+    width: 100%; aspect-ratio: 16/9; overflow: hidden;
+    background: var(--gray-100);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 48px;
+  }
+  .blog-card.featured .blog-img { aspect-ratio: 16/8; background: var(--navy); font-size: 64px; }
+
+  .blog-body { padding: 24px; }
+  .blog-cat {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--orange); margin-bottom: 10px;
+  }
+  .blog-title {
+    font-size: 16px; font-weight: 700; color: var(--navy);
+    line-height: 1.4; margin-bottom: 10px;
+  }
+  .blog-card.featured .blog-title { font-size: 22px; }
+  .blog-excerpt { font-size: 13px; color: var(--gray-400); line-height: 1.7; margin-bottom: 16px; }
+  .blog-meta { font-size: 12px; color: var(--gray-400); display: flex; align-items: center; gap: 12px; }
+  .blog-meta-dot { width: 3px; height: 3px; background: var(--gray-200); border-radius: 50%; }
+
+  /* ── COMING SOON (AIDO) ── */
+  #aido {
+    background: linear-gradient(135deg, var(--navy) 0%, #152B50 100%);
+    padding: 100px 5%;
+  }
+  .aido-inner {
+    max-width: 900px; margin: 0 auto; text-align: center;
+  }
+  .aido-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(245,100,10,0.15); border: 1px solid rgba(245,100,10,0.3);
+    border-radius: 100px; padding: 6px 20px; margin-bottom: 32px;
+    font-size: 12px; color: var(--orange-light); font-weight: 600;
+    letter-spacing: 0.1em; text-transform: uppercase;
+  }
+  .aido-title {
+    font-size: clamp(32px, 5vw, 52px); font-weight: 800;
+    color: white; line-height: 1.15;
+    letter-spacing: -0.03em; margin-bottom: 24px;
+  }
+  .aido-title em { color: var(--orange); font-style: normal; }
+  .aido-desc { font-size: 17px; color: rgba(255,255,255,0.6); max-width: 600px; margin: 0 auto 48px; line-height: 1.8; }
+
+  .aido-features {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 20px; margin-bottom: 48px;
+  }
+  .aido-feat {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 14px; padding: 24px; text-align: left;
+  }
+  .aido-feat-icon { font-size: 28px; margin-bottom: 12px; }
+  .aido-feat h4 { font-size: 14px; font-weight: 700; color: white; margin-bottom: 6px; }
+  .aido-feat p { font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.6; }
+
+  .notify-form { display: flex; gap: 12px; max-width: 480px; margin: 0 auto; }
+  .notify-input {
+    flex: 1; padding: 14px 20px; border-radius: 8px;
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+    color: white; font-size: 15px; font-family: var(--font-sans);
+    outline: none;
+  }
+  .notify-input::placeholder { color: rgba(255,255,255,0.3); }
+  .notify-input:focus { border-color: var(--orange); }
+
+  /* ── CONTACT ── */
+  #contact { background: var(--cream); }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; margin-top: 64px; }
+  .contact-info h3 { font-size: 22px; font-weight: 800; margin-bottom: 16px; }
+  .contact-info p { font-size: 15px; color: var(--gray-600); line-height: 1.8; margin-bottom: 40px; }
+  .contact-item { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 24px; }
+  .contact-icon {
+    width: 44px; height: 44px; border-radius: 10px;
+    background: var(--orange-pale); display: flex;
+    align-items: center; justify-content: center;
+    font-size: 20px; flex-shrink: 0;
+  }
+  .contact-item h4 { font-size: 13px; color: var(--gray-400); margin-bottom: 4px; }
+  .contact-item p { font-size: 15px; color: var(--navy); font-weight: 600; margin: 0; }
+
+  .contact-form { background: white; border-radius: 20px; padding: 40px; border: 1px solid var(--gray-200); }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+  .form-group { margin-bottom: 16px; }
+  .form-group label { display: block; font-size: 13px; font-weight: 600; color: var(--gray-600); margin-bottom: 8px; }
+  .form-group input, .form-group select, .form-group textarea {
+    width: 100%; padding: 12px 16px; border-radius: 8px;
+    border: 1px solid var(--gray-200); background: var(--cream);
+    font-size: 15px; font-family: var(--font-sans); color: var(--navy);
+    outline: none; transition: border-color 0.2s;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    border-color: var(--orange);
+  }
+  .form-group textarea { height: 120px; resize: vertical; }
+  .form-submit { width: 100%; background: var(--navy); color: white; padding: 16px; border-radius: 8px; font-size: 16px; font-weight: 700; border: none; cursor: pointer; transition: background 0.2s; }
+  .form-submit:hover { background: var(--navy-light); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy); color: rgba(255,255,255,0.6);
+    padding: 64px 5% 32px;
+  }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px; margin-bottom: 48px; max-width: 1200px; margin: 0 auto 48px; }
+  .footer-brand p { font-size: 14px; line-height: 1.8; margin-top: 16px; max-width: 260px; }
+  .footer-col h4 { font-size: 14px; font-weight: 700; color: white; margin-bottom: 20px; }
+  .footer-col ul { list-style: none; }
+  .footer-col ul li { margin-bottom: 12px; }
+  .footer-col ul li a { font-size: 14px; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+  .footer-col ul li a:hover { color: white; }
+  .footer-bottom { max-width: 1200px; margin: 0 auto; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+  .footer-bottom p { font-size: 13px; }
+  .footer-badge { background: rgba(245,100,10,0.15); color: var(--orange-light); font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 100px; border: 1px solid rgba(245,100,10,0.25); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-visual { display: none; }
+    .service-block { grid-template-columns: 1fr; padding: 36px; }
+    .process-steps { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .process-steps::before { display: none; }
+    .blog-grid { grid-template-columns: 1fr; }
+    .aido-features { grid-template-columns: 1fr 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .nav-links { display: none; }
+  }
+
+  /* ── ANIMATIONS ── */
+  .fade-up {
+    opacity: 0; transform: translateY(24px);
+    transition: opacity 0.6s, transform 0.6s;
+  }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+  .fade-up:nth-child(2) { transition-delay: 0.1s; }
+  .fade-up:nth-child(3) { transition-delay: 0.2s; }
+  .fade-up:nth-child(4) { transition-delay: 0.3s; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-mark">OG</div>
+    <div>
+      <div class="nav-logo-text">歐格數位科技</div>
+      <div class="nav-logo-sub">OG Digital Technology</div>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="#services">服務項目</a>
+    <a href="#process">合作流程</a>
+    <a href="#blog">最新文章</a>
+    <a href="#aido">Aido AI</a>
+    <a href="#contact" class="nav-cta">免費諮詢</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-grid">
+    <div>
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        <span>數位行銷 × 軟體工程</span>
+      </div>
+      <h1>讓您的品牌<br>在數位世界<em>發光</em></h1>
+      <p class="hero-desc">從 Meta 廣告精準投放，到軟體系統客製開發，歐格數位科技為中小企業提供全方位的數位成長解決方案。</p>
+      <div class="hero-actions">
+        <a href="#services" class="btn-primary">探索服務項目</a>
+        <a href="#contact" class="btn-outline">免費 30 分鐘諮詢</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <div class="hero-card-icon">📊</div>
+        <h3>廣告投資回報</h3>
+        <p>平均 ROAS 提升</p>
+        <div class="hero-card-stat">3.8×</div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-icon">🚀</div>
+        <h3>專案交付率</h3>
+        <p>準時交付紀錄</p>
+        <div class="hero-card-stat">98%</div>
+      </div>
+      <div class="hero-card hero-card-full">
+        <div class="hero-card-icon">🤝</div>
+        <h3>服務範圍</h3>
+        <p>Meta廣告投放・廣告帳號租用・網站開發・遊戲開發・程式設計外包，一站式數位解決方案。</p>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>向下探索</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="section-inner">
+    <div class="services-header">
+      <div>
+        <div class="section-label">核心服務</div>
+        <h2 class="section-title">我們能為您做什麼</h2>
+        <p class="section-desc">兩大服務主軸，涵蓋數位行銷與技術開發，精準滿足您的業務成長需求。</p>
+      </div>
+    </div>
+
+    <!-- 服務一 -->
+    <div class="service-block fade-up">
+      <div class="service-num">01</div>
+      <div>
+        <div class="service-icon">📣</div>
+        <h3 class="service-title">Meta 廣告服務</h3>
+        <p class="service-desc">
+          專業 Meta（Facebook / Instagram）廣告投放團隊，從受眾分析、創意素材到成效優化一條龍服務。
+          另提供廣告帳號租用方案，解決帳號受限或新帳號預算不足的困境。
+        </p>
+        <div class="service-tags">
+          <span class="tag accent">廣告投放代操</span>
+          <span class="tag accent">帳號租用</span>
+          <span class="tag">受眾研究</span>
+          <span class="tag">創意素材製作</span>
+          <span class="tag">成效報告</span>
+        </div>
+        <a href="#contact" class="btn-primary">了解廣告方案</a>
+      </div>
+      <div>
+        <ul class="service-features">
+          <li>
+            <span class="feature-dot">✓</span>
+            <div><strong>廣告投放代操服務</strong><br>
+            <span style="color:var(--gray-400);font-size:13px">Facebook + Instagram 雙平台，含受眾設定、出價策略、A/B 測試，每月成效報告。</span></div>
+          </li>
+          <li>
+            <span class="feature-dot">✓</span>
+            <div><strong>廣告帳號租用服務</strong><br>
+            <span style="color:var(--gray-400);font-size:13px">提供已驗證的老帳號，解決新帳號預算上限低、帳號受限等問題，靈活彈性的計費方式。</span></div>
+          </li>
+          <li>
+            <span class="feature-dot">✓</span>
+            <div><strong>素材創意設計</strong><br>
+            <span style="color:var(--gray-400);font-size:13px">廣告圖文、影片素材製作，提升廣告點擊率與轉換率。</span></div>
+          </li>
+          <li>
+            <span class="feature-dot">✓</span>
+            <div><strong>像素追蹤與數據分析</strong><br>
+            <span style="color:var(--gray-400);font-size:13px">Meta Pixel 安裝設定，精準追蹤轉換事件，數據驅動廣告優化決策。</span></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 服務二 -->
+    <div class="service-block alt fade-up">
+      <div class="service-num">02</div>
+      <div>
+        <div class="service-icon">⚙️</div>
+        <h3 class="service-title">軟體工程外包服務</h3>
+        <p class="service-desc">
+          具備完整軟體開發能力，涵蓋遊戲開發、網站建置到系統程式設計。
+          提供彈性的外包合作模式，讓您以更低的成本取得高品質的技術交付成果。
+        </p>
+        <div class="service-tags">
+          <span class="tag accent">遊戲開發</span>
+          <span class="tag accent">網站開發</span>
+          <span class="tag accent">系統程式設計</span>
+          <span class="tag">AI 應用整合</span>
+          <span class="tag">API 串接</span>
+        </div>
+        <a href="#contact" class="btn-primary" style="background:var(--orange)">了解技術服務</a>
+      </div>
+      <div>
+        <ul class="service-features">
+          <li>
+            <span class="feature-dot">✓</span>
+            <div><strong style="color:white">遊戲開發</strong><br>
+            <span style="color:rgba(255,255,255,0.45);font-size:13px">H5 小遊戲、行動遊戲、互動體驗開發，支援 Unity、Cocos Creator 等主流引擎。</span></div>
+          </li>
+          <li>
+            <span class="feature-dot">✓</span>
+            <div><strong style="color:white">網站開發</strong><br>
+            <span style="color:rgba(255,255,255,0.45);font-size:13px">企業官網、電商平台、Landing Page、後台管理系統，React / Vue / Node.js 全端開發。</span></div>
+          </li>
+          <li>
+            <span class="feature-dot">✓</span>
+            <div><strong style="color:white">系統程式設計</strong><br>
+            <span style="color:rgba(255,255,255,0.45);font-size:13px">API 開發串接、資料庫設計、自動化流程、AI 應用整合（LLM / Chatbot）。</span></div>
+          </li>
+          <li>
+            <span class="feature-dot">✓</span>
+            <div><strong style="color:white">彈性外包合作模式</strong><br>
+            <span style="color:rgba(255,255,255,0.45);font-size:13px">專案制或月費制均可，依需求靈活調整開發資源，提供完整原始碼交付。</span></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="section-inner">
+    <div style="text-align:center">
+      <div class="section-label">合作流程</div>
+      <h2 class="section-title">四步驟，快速啟動您的專案</h2>
+      <p class="section-desc" style="margin:0 auto">從初次諮詢到專案交付，我們的流程透明、有效率，讓您安心。</p>
+    </div>
+    <div class="process-steps">
+      <div class="process-step fade-up">
+        <div class="step-circle active">
+          💬
+          <span class="step-num">1</span>
+        </div>
+        <h4 class="step-title">免費諮詢</h4>
+        <p class="step-desc">30 分鐘線上會議，了解您的需求與目標，提供初步建議方向。</p>
+      </div>
+      <div class="process-step fade-up">
+        <div class="step-circle">
+          📋
+          <span class="step-num">2</span>
+        </div>
+        <h4 class="step-title">提案報價</h4>
+        <p class="step-desc">根據需求提供詳細提案與報價單，明確服務範疇與時程。</p>
+      </div>
+      <div class="process-step fade-up">
+        <div class="step-circle">
+          🛠️
+          <span class="step-num">3</span>
+        </div>
+        <h4 class="step-title">執行開發</h4>
+        <p class="step-desc">定期進度回報，保持溝通透明，確保成果符合預期。</p>
+      </div>
+      <div class="process-step fade-up">
+        <div class="step-circle">
+          🎯
+          <span class="step-num">4</span>
+        </div>
+        <h4 class="step-title">交付上線</h4>
+        <p class="step-desc">完整驗收後交付，並提供後續維護支援服務。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section id="blog">
+  <div class="section-inner">
+    <div class="blog-header">
+      <div>
+        <div class="section-label">最新文章</div>
+        <h2 class="section-title">數位行銷 × 技術知識分享</h2>
+      </div>
+      <a href="https://daisy-cheetah-252.notion.site/36f7ceec6a1a800f9f71c0310ede8558" target="_blank" style="color:var(--orange);font-size:15px;font-weight:600;text-decoration:none">查看全部文章 →</a>
+    </div>
+    <div class="blog-grid">
+      <a href="https://daisy-cheetah-252.notion.site/2026-Meta-ROAS-5-36f7ceec6a1a807584d1d6be52535b0d" target="_blank" style="text-decoration:none;color:inherit" class="blog-card featured">
+        <div class="blog-img" style="background:var(--navy);display:flex;align-items:center;justify-content:center;font-size:64px">📣</div>
+        <div class="blog-body">
+          <div class="blog-cat">Meta 廣告</div>
+          <h3 class="blog-title">2026 年 Meta 廣告投放完整攻略：提升 ROAS 的 5 個關鍵策略</h3>
+          <p class="blog-excerpt">在 Meta 廣告競爭日益激烈的今天，許多台灣中小企業主都有同樣的煩惱：花了大量預算投放廣告，卻看不到理想的回報。本文分享 2026 年最有效的 5 個提升 ROAS 的關鍵策略...</p>
+          <div class="blog-meta">
+            <span>歐格編輯部</span>
+            <span class="blog-meta-dot"></span>
+            <span>2026年1月</span>
+            <span class="blog-meta-dot"></span>
+            <span>8 分鐘閱讀</span>
+          </div>
+        </div>
+      </a>
+      <div class="blog-card">
+        <div class="blog-img" style="background:#EEF5FF">🤖</div>
+        <div class="blog-body">
+          <div class="blog-cat">AI 工具</div>
+          <h3 class="blog-title">2026年中小企業必用的 10 個 AI 工具完整評測</h3>
+          <p class="blog-excerpt">AI 工具的普及讓中小企業以極低成本提升營運效率。本文精選 10 個最值得投入的 AI 工具，從內容創作到自動化流程，全面提升您的競爭力...</p>
+          <div class="blog-meta">
+            <span>2026年6月</span>
+            <span class="blog-meta-dot"></span>
+            <span>10 分鐘</span>
+          </div>
+        </div>
+      </div>
+      <div class="blog-card">
+        <div class="blog-img" style="background:#EEF2FF">💡</div>
+        <div class="blog-body">
+          <div class="blog-cat">即將更新</div>
+          <h3 class="blog-title">ChatGPT 實戰指南：中小企業老闆如何用 AI 每天省 2 小時</h3>
+          <p class="blog-excerpt">從文案撰寫、客服回覆到會議記錄，本文教您用 ChatGPT 打造專屬工作助理，每天省下超過 2 小時的重複性工作...</p>
+          <div class="blog-meta">
+            <span>2026年6月（即將發布）</span>
+            <span class="blog-meta-dot"></span>
+            <span>6 分鐘</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AIDO COMING SOON -->
+<section id="aido">
+  <div class="aido-inner">
+    <div class="aido-badge">🚀 即將上線</div>
+    <h2 class="aido-title">認識 <em>Aido（愛多）</em><br>您的個人 AI 助理</h2>
+    <p class="aido-desc">歐格數位科技最新力作。透過 Telegram，讓 AI 幫您記帳、提醒用藥、彙整新聞、追蹤股票。無需技術背景，5 分鐘即可上手。</p>
+    <div class="aido-features">
+      <div class="aido-feat">
+        <div class="aido-feat-icon">💰</div>
+        <h4>智慧記帳</h4>
+        <p>說話就能記帳，AI 自動分類生成月報表</p>
+      </div>
+      <div class="aido-feat">
+        <div class="aido-feat-icon">💊</div>
+        <h4>健康提醒</h4>
+        <p>服藥提醒、複診通知，照顧您和家人的健康</p>
+      </div>
+      <div class="aido-feat">
+        <div class="aido-feat-icon">📈</div>
+        <h4>股票追蹤</h4>
+        <p>台股美股即時報價，自選股每日盤後推播</p>
+      </div>
+      <div class="aido-feat">
+        <div class="aido-feat-icon">📰</div>
+        <h4>新聞彙整</h4>
+        <p>依您的興趣，每日推送精選新聞摘要</p>
+      </div>
+      <div class="aido-feat">
+        <div class="aido-feat-icon">📅</div>
+        <h4>行程管理</h4>
+        <p>語音或文字輸入行程，AI 自動提醒</p>
+      </div>
+      <div class="aido-feat">
+        <div class="aido-feat-icon">🤖</div>
+        <h4>業務自動化</h4>
+        <p>Pro 版專屬，訂單通知、客服範本一鍵設定</p>
+      </div>
+    </div>
+    <p style="color:rgba(255,255,255,0.4);font-size:14px;margin-bottom:16px">登記搶先體驗，上線時第一時間通知您</p>
+    <div class="notify-form">
+      <input type="email" class="notify-input" placeholder="輸入您的 Email 地址">
+      <button class="btn-primary" style="white-space:nowrap">搶先登記</button>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div style="text-align:center;margin-bottom:0">
+      <div class="section-label">聯絡我們</div>
+      <h2 class="section-title">開始您的數位成長旅程</h2>
+      <p class="section-desc" style="margin:0 auto">填寫表單或直接聯絡我們，我們將於 1 個工作日內回覆。</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>讓我們聊聊您的需求</h3>
+        <p>無論是 Meta 廣告投放、帳號租用，還是軟體開發外包，歐格數位科技的專業團隊都能為您提供量身打造的解決方案。</p>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <h4>公司地址</h4>
+            <p>臺北市信義區忠孝東路5段370號4樓</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📱</div>
+          <div>
+            <h4>聯絡電話</h4>
+            <p>0915-150-658</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <h4>電子信箱</h4>
+            <p>yofun0915150658@gmail.com</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <h4>服務時間</h4>
+            <p>週一至週五 09:00 – 18:00</p>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form" id="contact-form" action="https://formspree.io/f/xkgnbpqr" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label>您的姓名 *</label>
+            <input type="text" name="姓名" placeholder="王小明" required>
+          </div>
+          <div class="form-group">
+            <label>聯絡電話</label>
+            <input type="tel" name="聯絡電話" placeholder="0912-345-678">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>電子信箱 *</label>
+          <input type="email" name="電子信箱" placeholder="your@email.com" required>
+        </div>
+        <div class="form-group">
+          <label>您感興趣的服務</label>
+          <select name="服務項目">
+            <option value="">請選擇服務項目</option>
+            <option>Meta 廣告投放代操</option>
+            <option>Meta 廣告帳號租用</option>
+            <option>網站開發</option>
+            <option>遊戲開發</option>
+            <option>系統程式設計外包</option>
+            <option>Aido AI 助理（搶先體驗）</option>
+            <option>其他需求</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>需求說明</label>
+          <textarea name="需求說明" placeholder="請簡單描述您的需求或問題，我們將盡快與您聯繫..."></textarea>
+        </div>
+        <input type="hidden" name="_subject" value="【歐格數位科技】新客戶諮詢申請">
+        <input type="hidden" name="_language" value="zh">
+        <button class="form-submit" type="submit" id="contact-submit">送出諮詢申請 →</button>
+        <div id="form-success-msg" style="display:none;margin-top:16px;padding:14px 16px;border-radius:8px;background:#E8F8F0;border:1px solid #1D9E75;color:#0E6B4E;font-size:14px;font-weight:600;text-align:center"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="nav-logo" style="margin-bottom:8px">
+        <div class="nav-logo-mark">OG</div>
+        <div>
+          <div class="nav-logo-text" style="color:white">歐格數位科技</div>
+          <div class="nav-logo-sub">OG Digital Technology</div>
+        </div>
+      </a>
+      <p>提供 Meta 廣告投放、廣告帳號租用及軟體工程外包服務，幫助台灣中小企業加速數位成長。</p>
+    </div>
+    <div class="footer-col">
+      <h4>服務項目</h4>
+      <ul>
+        <li><a href="#services">Meta 廣告投放</a></li>
+        <li><a href="#services">廣告帳號租用</a></li>
+        <li><a href="#services">網站開發</a></li>
+        <li><a href="#services">遊戲開發</a></li>
+        <li><a href="#services">程式設計外包</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>關於我們</h4>
+      <ul>
+        <li><a href="#">公司簡介</a></li>
+        <li><a href="#blog">最新文章</a></li>
+        <li><a href="#aido">Aido AI 助理</a></li>
+        <li><a href="#contact">聯絡我們</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>法律資訊</h4>
+      <ul>
+        <li><a href="#">隱私權政策</a></li>
+        <li><a href="#">服務條款</a></li>
+        <li><a href="#">Cookie 政策</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 歐格數位科技有限公司 統一編號：60550313</p>
+    <div class="footer-badge">台灣製造 🇹🇼</div>
+  </div>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+const contactForm = document.getElementById('contact-form');
+const contactSubmitBtn = document.getElementById('contact-submit');
+const formSuccessMsg = document.getElementById('form-success-msg');
+
+contactSubmitBtn.addEventListener('click', function(){
+  if (typeof fbq === 'function') fbq('track', 'Lead');
+});
+
+contactForm.addEventListener('submit', function(e){
+  e.preventDefault();
+  contactSubmitBtn.disabled = true;
+  const originalText = contactSubmitBtn.textContent;
+  contactSubmitBtn.textContent = '送出中...';
+
+  fetch(contactForm.action, {
+    method: 'POST',
+    body: new FormData(contactForm),
+    headers: { 'Accept': 'application/json' }
+  }).then(response => {
+    if (response.ok) {
+      contactForm.reset();
+      formSuccessMsg.textContent = '✅ 感謝您的諮詢！我們將於 1 個工作日內與您聯繫 😊';
+      formSuccessMsg.style.display = 'block';
+    } else {
+      formSuccessMsg.style.background = '#FDECEC';
+      formSuccessMsg.style.borderColor = '#D9453F';
+      formSuccessMsg.style.color = '#A6291F';
+      formSuccessMsg.textContent = '❌ 送出失敗，請稍後再試或直接來信 yofun0915150658@gmail.com';
+      formSuccessMsg.style.display = 'block';
+    }
+  }).catch(() => {
+    formSuccessMsg.style.background = '#FDECEC';
+    formSuccessMsg.style.borderColor = '#D9453F';
+    formSuccessMsg.style.color = '#A6291F';
+    formSuccessMsg.textContent = '❌ 送出失敗，請檢查網路連線後再試一次';
+    formSuccessMsg.style.display = 'block';
+  }).finally(() => {
+    contactSubmitBtn.disabled = false;
+    contactSubmitBtn.textContent = originalText;
+  });
+});
+
+document.querySelector('.notify-form button').addEventListener('click', function(){
+  const input = document.querySelector('.notify-input');
+  if(input.value.includes('@')) {
+    this.textContent = '✓ 已登記！';
+    this.style.background = '#1D9E75';
+    input.value = '';
+    setTimeout(() => {
+      this.textContent = '搶先登記';
+      this.style.background = '';
+    }, 3000);
+  }
+});
+</script>
+</body>
+</html>
